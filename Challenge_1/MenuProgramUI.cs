@@ -86,14 +86,12 @@ namespace Challenge_1
 
         public void RemoveMenuItem()
         {
-
             List<MenuItem> itemList = _itemRepo.GetMenuItemList();
 
             Console.WriteLine("\nPlease type in the menu item, using the meal name, that you would like removed.");
             foreach (MenuItem item in itemList)
             {
                 Console.WriteLine($"{item.MealNumber}\t {item.MealName}\t {item.MealDescription}\t{item.Ingredients}\t{item.MealPrice:C:}");
-
             }
             var removedItem = Console.ReadLine();
             foreach (MenuItem item in itemList)
@@ -103,8 +101,6 @@ namespace Challenge_1
                     _itemRepo.RemoveItemFromMenu(item);
                     break;
                 }
-
-                
             }
         }
     }

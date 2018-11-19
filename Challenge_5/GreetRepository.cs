@@ -9,7 +9,6 @@ namespace Challenge_5
     public class GreetRepository
     {
         List<Customer> _customerList = new List<Customer>();
-        
         public void AddCustomer(Customer list)
         {
             _customerList.Add(list);
@@ -18,14 +17,17 @@ namespace Challenge_5
         {
             _customerList.Remove(removeCustomer);
         }
-        List<Customer> UpdateCustomer = new List<Customer>();
-       // {
-          //  _customerList.Update();
-        //}
+        public void UpdateCustomer(Customer updateCustomer)
+        {
+            //_customerList.Update(updateCustomer);
+        }
         public List<Customer> GetCustomerList()
         {
             _customerList.Sort((x, y) => string.Compare(x.LastName, y.LastName));
+
             return _customerList;
         }
+
+
     }
-}
+}  
